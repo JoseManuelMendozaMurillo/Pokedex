@@ -1,5 +1,6 @@
 /* COSAS QUE FALTAN
  * Falta hacer el diseño responsivo
+ * Falta arreglar el problema de que cuando se cierre la card, se detenga la reproducción del audio
  */
 const pokemonName = document.getElementById("namePokemon");
 const btnSearchPokemon = document.getElementById("btnSearchPokemon");
@@ -104,7 +105,7 @@ function AnimatePokemonImg(pokemonImgFront, pokemonImgBack) {
 async function SearchPokemonInfo(pokemonName) {
   // Función para buscar el pokemón y obtener su información
   try {
-    const ruta = "./server/PokeApi.php";
+    const ruta = "../server/PokeApi.php";
     const request = await fetch(ruta, {
       method: "POST",
       body: JSON.stringify({ pokemonName: pokemonName }),
