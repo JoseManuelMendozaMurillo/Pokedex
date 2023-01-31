@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+
+    <title>Prueba</title>
+  </head>
+  <body>
+
+    <h1>Pokedex</h1>
+
+    <form action="">
+      <label for="namePokemon">Nombre del pokemon</label>
+      <input type="text" id="namePokemon" />
+      <button class="btn-search" type="button" id="btnSearchPokemon">
+        Buscar pokemon
+      </button>
+    </form>
+
+    <div class="loading" id="animationLoading">
+      <p class="loading-message" id="animationMessage">Descargando rap del pokemon ...</p>
+      <div class="loading-animate"></div>
+    </div>
+
+    <div class="card" id="pokemonCard">
+      <div class="card-header">
+        <img
+          class="card-header-img"
+          src="./img/pokebola3.jpg"
+          alt="Fondo pokebola"
+        />
+        <button class="card-header-btn" type="button" id="btnCloseCard">
+          <svg
+            class="card-header-btn-close"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="card-body-container-img-pokemon">
+          <img
+            id="pokemonImg"
+            class="card-body-img-pokemon"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+          />
+        </div>
+        <h2 class="card-body-name-pokemon" id="name">
+          Pikachu
+          <span class="card-body-name-life-pokemon" id="life">40hp</span>
+        </h2>
+        <p class="card-body-exp-pokemon" id="exp">112 exp</p>
+        <p class="card-body-rap-pokemon">Rap de <span id="nameRap">pikachu</span></p>
+        <audio class="card-body-rap-audio-pokemon" id="pokemonRap" src="" controls></audio>
+      </div>
+      <div class="card-footer">
+        <div class="card-footer-group">
+          <p class="card-footer-value" id="attack">14K</p>
+          <p class="card-footer-label">Ataque</p>
+        </div>
+        <div class="card-footer-group">
+          <p class="card-footer-value" id="specialAttack">100K</p>
+          <p class="card-footer-label">Ataque Especial</p>
+        </div>
+        <div class="card-footer-group">
+          <p class="card-footer-value" id="defense">30K</p>
+          <p class="card-footer-label">Defensa</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./index.js" defer></script>
+
+  </body>
+</html>
